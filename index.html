@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comic Festival - Entre no grupo</title>
+<meta name="facebook-domain-verification" content="v1abcuzzfrgm05mj5cph054adxxkp9" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2544053436110738');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2544053436110738&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #7B3FE4;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .page {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    background: #A65AE6;
+    background-image: radial-gradient(rgba(255,255,255,0.07) 1.5px, transparent 1.6px);
+    background-size: 16px 16px;
+    border: 5px solid #000;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .top-banner {
+    background: #FC8D1B;
+    padding: 14px 16px 28px 92px;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    border-bottom: 5px solid #000;
+    text-align: center;
+  }
+
+  .date-box {
+    display: inline-block;
+    max-width: 100%;
+    background: #FCD80B;
+    border: 3px solid #000;
+    border-radius: 6px;
+    padding: 8px 14px;
+    transform: rotate(-2deg);
+  }
+
+  .date-box span {
+    font-family: 'Bangers', cursive;
+    font-size: 17px;
+    color: #1A0B3D;
+    letter-spacing: 0.5px;
+  }
+
+  .boom-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 72px;
+    height: 72px;
+    background: #FCD80B;
+    border: 3px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-10deg);
+    z-index: 5;
+  }
+
+  .boom-badge span {
+    font-family: 'Bangers', cursive;
+    font-size: 19px;
+    color: #FC3B42;
+    -webkit-text-stroke: 1px #000;
+  }
+
+  .headline {
+    text-align: center;
+    padding: 26px 20px 4px;
+  }
+
+  .headline .line1 {
+    font-family: 'Bangers', cursive;
+    font-size: 62px;
+    line-height: 0.85;
+    color: #FC3B42;
+    -webkit-text-stroke: 2px #1A0B3D;
+    text-shadow: 4px 4px 0 #1A0B3D;
+    letter-spacing: 1px;
+  }
+
+  .headline .line2 {
+    font-family: 'Bangers', cursive;
+    font-size: 52px;
+    line-height: 0.9;
+    color: #FCD80B;
+    -webkit-text-stroke: 2px #3C39BC;
+    text-shadow: 4px 4px 0 #3C39BC;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+
+  .subtitle {
+    text-align: center;
+    padding: 4px 30px 18px;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .countdown-label {
+    text-align: center;
+    padding: 0 20px 10px;
+  }
+
+  .countdown-label span {
+    display: inline-block;
+    background: #FCD80B;
+    border: 3px solid #000;
+    border-radius: 30px;
+    padding: 7px 18px;
+    font-family: 'Bangers', cursive;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: #1A0B3D;
+    transform: rotate(-1.5deg);
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 20px 20px;
+  }
+
+  .countdown .unit {
+    background: #1A0B3D;
+    border: 2px solid #FCD80B;
+    border-radius: 8px;
+    padding: 8px 10px;
+    text-align: center;
+    min-width: 58px;
+  }
+
+  .countdown .unit .num {
+    font-size: 22px;
+    font-weight: 600;
+    color: #FCD80B;
+    line-height: 1;
+  }
+
+  .countdown .unit .label {
+    font-size: 10px;
+    color: #D9C4F5;
+    margin-top: 2px;
+  }
+
+  .cta-wrap {
+    position: relative;
+    padding: 0 24px 8px;
+  }
+
+  .cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #25D366;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    padding: 16px;
+    border: 3px solid #000;
+    border-radius: 12px;
+    box-shadow: 5px 5px 0 #1A0B3D;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+  }
+
+  .cta-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0 #1A0B3D;
+  }
+
+  .cta-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: #FFFFFF;
+  }
+
+  .limited-tag {
+    position: absolute;
+    top: -16px;
+    right: 4px;
+    background: #FC3B42;
+    border: 2px solid #000;
+    border-radius: 30px;
+    padding: 6px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(8deg);
+    font-size: 10px;
+    font-weight: 600;
+    color: #FCD80B;
+    text-align: center;
+    line-height: 1.25;
+    letter-spacing: 0.3px;
+    animation: pulse-tag 1.4s ease-in-out infinite;
+  }
+
+  @keyframes pulse-tag {
+    0%, 100% { transform: rotate(8deg) scale(1); }
+    50% { transform: rotate(8deg) scale(1.08); }
+  }
+
+  .social-proof {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 20px 6px;
+  }
+
+  .social-proof .avatars {
+    display: flex;
+  }
+
+  .social-proof .avatars .avatar-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1.5px solid #000;
+    margin-left: -11px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-proof .avatars .avatar-circle:first-child { margin-left: 0; }
+
+  .social-proof .avatars .avatar-circle svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .live-ticker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 4px 20px 14px;
+  }
+
+  .live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4ADE80;
+    flex-shrink: 0;
+    animation: livePulse 1.6s ease-in-out infinite;
+  }
+
+  @keyframes livePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0.55); }
+    50% { box-shadow: 0 0 0 5px rgba(74,222,128,0); }
+  }
+
+  .live-text {
+    font-size: 12px;
+    color: #E8D6FA;
+    font-style: italic;
+    animation: liveFade 3.5s ease-in-out infinite;
+  }
+
+  @keyframes liveFade {
+    0%   { opacity: 0; }
+    12%  { opacity: 1; }
+    82%  { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  .social-proof span {
+    font-size: 12px;
+    color: #FFFFFF;
+  }
+
+  .footnote {
+    text-align: center;
+    padding: 0 20px 18px;
+    font-size: 11px;
+    color: #E8D6FA;
+  }
+  .reason-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    width: calc(100% - 48px);
+    max-width: 360px;
+    transform: translateX(-50%) translateY(30px) scale(0.95);
+    background: #FFFFFF;
+    border: 3px solid #000;
+    border-radius: 14px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 5px 5px 0 #1A0B3D;
+    opacity: 0;
+    z-index: 50;
+    animation: toastCycle 5.5s ease forwards;
+  }
+
+  .toast-1 { animation-delay: 1s; }
+  .toast-2 { animation-delay: 6.5s; }
+  .toast-3 { animation-delay: 12s; }
+
+  @keyframes toastCycle {
+    0%   { opacity: 0; transform: translateX(-50%) translateY(30px) scale(0.95); }
+    10%  { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+    82%  { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-14px) scale(0.97); }
+  }
+
+  .toast-icon {
+    position: relative;
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .toast-icon .burst {
+    position: absolute;
+    inset: 0;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: burstPop 0.7s cubic-bezier(.34,1.56,.64,1) both;
+  }
+
+  .toast-icon .face {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    animation: burstPop 0.7s cubic-bezier(.34,1.56,.64,1) both;
+  }
+
+  .toast-1 .burst, .toast-1 .face { animation-delay: 1.15s; }
+  .toast-2 .burst, .toast-2 .face { animation-delay: 6.65s; }
+  .toast-3 .burst, .toast-3 .face { animation-delay: 12.15s; }
+
+  @keyframes burstPop {
+    0%   { transform: scale(0) rotate(-20deg); opacity: 0; }
+    55%  { transform: scale(1.25) rotate(8deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .toast-icon .burst, .toast-icon .face { animation: none; }
+  }
+
+  .toast-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #1A0B3D;
+    line-height: 1.35;
+  }
+
+  .toast-text strong {
+    font-weight: 600;
+    color: #FC3B42;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reason-toast { animation: none; opacity: 1; transform: translateX(-50%); }
+  }
+</style>
+</head>
+<body>
+
+  <div class="page">
+
+    <div class="top-banner">
+      <div class="date-box"><span>10, 11 E 12 DE OUTUBRO</span></div>
+    </div>
+
+    <div class="boom-badge"><span>BOOM</span></div>
+
+    <div class="headline">
+      <div class="line1">COMIC</div>
+      <div class="line2">FESTIVAL</div>
+    </div>
+
+    <p class="subtitle">Entre no grupo oficial, o link da pré-venda só será disponibilizado por lá!!</p>
+
+    <p class="countdown-label"><span>A pré-venda abre em:</span></p>
+    <div class="countdown">
+      <div class="unit"><div class="num" id="cd-days">--</div><div class="label">DIAS</div></div>
+      <div class="unit"><div class="num" id="cd-hours">--</div><div class="label">HORAS</div></div>
+      <div class="unit"><div class="num" id="cd-min">--</div><div class="label">MIN</div></div>
+      <div class="unit"><div class="num" id="cd-sec">--</div><div class="label">SEG</div></div>
+    </div>
+
+    <div class="cta-wrap">
+      <a class="cta-btn" id="btn-entrar" href="https://chat.whatsapp.com/KHrIpIv7g3G6lEY82mU1GJ?mode=gi_t">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.07-1.33A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.18-1.78 1.25-.46.06-1.03.09-1.66-.1-.38-.12-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.44-1.08-2.74 0-1.3.68-1.94.92-2.2.24-.26.53-.33.7-.33h.5c.16 0 .38-.03.58.44.22.53.75 1.83.82 1.97.07.14.11.3.02.48-.09.18-.14.3-.27.46-.13.16-.28.36-.4.48-.13.13-.27.27-.12.53.15.26.68 1.12 1.46 1.81 1 .89 1.85 1.17 2.11 1.3.26.13.41.11.56-.07.16-.18.65-.75.83-1.01.18-.26.36-.21.6-.13.24.08 1.55.73 1.82.86.27.13.45.2.51.31.07.12.07.66-.15 1.28z"/></svg>
+        ENTRAR AGORA NO GRUPO VIP
+      </a>
+      <div class="limited-tag">VAGAS<br>LIMITADAS</div>
+    </div>
+
+    <div class="social-proof">
+      <div class="avatars">
+        <div class="avatar-circle" style="background:#FC8D1B;">
+          <svg viewBox="0 0 28 28"><circle cx="14" cy="16" r="8.5" fill="#FFDDB0"/><path d="M6 10 L3 3 L11 8Z" fill="#1A0B3D" stroke="#000" stroke-width="0.6"/><path d="M22 10 L25 3 L17 8Z" fill="#1A0B3D" stroke="#000" stroke-width="0.6"/><path d="M4.5 5 L7 4 L5 8Z" fill="#FC3B42"/><path d="M23.5 5 L21 4 L23 8Z" fill="#FC3B42"/><rect x="6.5" y="13.5" width="15" height="3.4" fill="#1A0B3D" rx="1.2"/><ellipse cx="10.5" cy="15.2" rx="1.5" ry="1.9" fill="#FFF"/><ellipse cx="17.5" cy="15.2" rx="1.5" ry="1.9" fill="#FFF"/><path d="M11 21 Q14 23 17 21" stroke="#1A0B3D" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="avatar-circle" style="background:#3C39BC;">
+          <svg viewBox="0 0 28 28"><circle cx="14" cy="17" r="7.8" fill="#FFDDB0"/><path d="M4 13 L14 1 L24 13Z" fill="#3C1A6B" stroke="#000" stroke-width="0.6"/><rect x="10.5" y="9" width="7" height="3" fill="#3C1A6B"/><circle cx="14" cy="2" r="1.9" fill="#FCD80B" stroke="#000" stroke-width="0.6"/><rect x="6" y="14.5" width="16" height="3.4" fill="#3C1A6B" rx="1.2"/><ellipse cx="10.5" cy="16.3" rx="1.4" ry="1.8" fill="#FFF"/><ellipse cx="17.5" cy="16.3" rx="1.4" ry="1.8" fill="#FFF"/><path d="M11.5 22 Q14 24 16.5 22" stroke="#1A0B3D" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="avatar-circle" style="background:#FC3B42;">
+          <svg viewBox="0 0 28 28"><circle cx="14" cy="16" r="8.5" fill="#FFDDB0"/><path d="M4.5 9 Q14 2 23.5 9 Q23.5 6.5 14 5.5 Q4.5 6.5 4.5 9Z" fill="#1A0B3D" stroke="#000" stroke-width="0.6"/><path d="M5 13 Q14 9 23 13 Q23 16 19 16.5 Q14 17.5 9 16.5 Q5 16 5 13Z" fill="#1A0B3D"/><circle cx="9.5" cy="14" r="1.1" fill="#FFDDB0"/><circle cx="18.5" cy="14" r="1.1" fill="#FFDDB0"/><path d="M11 21 Q14 23 17 21" stroke="#1A0B3D" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+      <span>+ de 300 fãs já entraram, só falta você</span>
+    </div>
+
+    <div class="live-ticker">
+      <span class="live-dot"></span>
+      <span class="live-text" id="live-text">alguém acabou de entrar no grupo</span>
+    </div>
+
+    <p class="footnote">Você será redirecionado para o WhatsApp</p>
+
+  </div>
+
+  <div class="reason-toast toast-1">
+    <div class="toast-icon">
+      <svg class="burst" viewBox="0 0 64 64"><polygon points="32,0 39,22 61,22 43,36 50,58 32,45 14,58 21,36 3,22 25,22" fill="#FCD80B" stroke="#000" stroke-width="2"/></svg>
+      <svg class="face" viewBox="0 0 46 46">
+        <circle cx="23" cy="23" r="20" fill="#FC3B42" stroke="#000" stroke-width="2.5"/>
+        <path d="M23 3 L23 43 M3 23 L43 23 M8 8 L38 38 M38 8 L8 38" stroke="#1A0B3D" stroke-width="1.4" opacity="0.6"/>
+        <path d="M23 3 C15 10 15 16 23 23 C31 16 31 10 23 3Z" fill="#1A0B3D" opacity="0.25"/>
+        <ellipse cx="15" cy="21" rx="7" ry="9" fill="#FFFFFF" stroke="#000" stroke-width="2" transform="rotate(-8 15 21)"/>
+        <ellipse cx="31" cy="21" rx="7" ry="9" fill="#FFFFFF" stroke="#000" stroke-width="2" transform="rotate(8 31 21)"/>
+      </svg>
+    </div>
+    <div class="toast-text">🎟️ <strong>Menor preço garantido!</strong></div>
+  </div>
+
+  <div class="reason-toast toast-2">
+    <div class="toast-icon">
+      <svg class="burst" viewBox="0 0 64 64"><polygon points="32,0 39,22 61,22 43,36 50,58 32,45 14,58 21,36 3,22 25,22" fill="#FC8D1B" stroke="#000" stroke-width="2"/></svg>
+      <svg class="face" viewBox="0 0 46 46">
+        <circle cx="23" cy="24" r="17" fill="#FFF3DE" stroke="#000" stroke-width="2.5"/>
+        <path d="M6 12 L14 2 L18 14 Z" fill="#3C39BC" stroke="#000" stroke-width="1.5"/>
+        <circle cx="8" cy="3" r="2.6" fill="#FCD80B" stroke="#000" stroke-width="1.2"/>
+        <path d="M40 12 L32 2 L28 14 Z" fill="#FC3B42" stroke="#000" stroke-width="1.5"/>
+        <circle cx="38" cy="3" r="2.6" fill="#FCD80B" stroke="#000" stroke-width="1.2"/>
+        <rect x="10" y="27" width="6" height="6" fill="#FC3B42" transform="rotate(45 13 30)"/>
+        <rect x="30" y="27" width="6" height="6" fill="#3C39BC" transform="rotate(45 33 30)"/>
+        <ellipse cx="15" cy="22" rx="2.3" ry="3" fill="#1A0B3D"/>
+        <ellipse cx="31" cy="22" rx="2.3" ry="3" fill="#1A0B3D"/>
+        <path d="M14 33 Q23 39 32 33" stroke="#1A0B3D" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="toast-text">🔥 <strong>Acesso antecipado</strong> aos ingressos e informações exclusivas!</div>
+  </div>
+
+  <div class="reason-toast toast-3">
+    <div class="toast-icon">
+      <svg class="burst" viewBox="0 0 64 64"><polygon points="32,0 39,22 61,22 43,36 50,58 32,45 14,58 21,36 3,22 25,22" fill="#0DCDCD" stroke="#000" stroke-width="2"/></svg>
+      <svg class="face" viewBox="0 0 46 46">
+        <path d="M7 14 L23 2 L39 14 L35 20 L11 20 Z" fill="#1A0B3D" stroke="#000" stroke-width="2"/>
+        <circle cx="7" cy="14" r="2.4" fill="#FCD80B" stroke="#000" stroke-width="1"/>
+        <circle cx="23" cy="2" r="2.4" fill="#FCD80B" stroke="#000" stroke-width="1"/>
+        <circle cx="39" cy="14" r="2.4" fill="#FCD80B" stroke="#000" stroke-width="1"/>
+        <circle cx="23" cy="26" r="15" fill="#FFFFFF" stroke="#000" stroke-width="2.5"/>
+        <rect x="9" y="19" width="6" height="6" fill="#1A0B3D" transform="rotate(45 12 22)"/>
+        <rect x="31" y="19" width="6" height="6" fill="#1A0B3D" transform="rotate(45 34 22)"/>
+        <ellipse cx="16" cy="24" rx="2" ry="2.6" fill="#1A0B3D"/>
+        <ellipse cx="30" cy="24" rx="2" ry="2.6" fill="#1A0B3D"/>
+        <path d="M12 31 Q23 41 34 31" stroke="#FC3B42" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="toast-text">⚠️ <strong>Lotes limitados</strong> — depois o valor aumenta!</div>
+  </div>
+
+  <script>
+    // Pré-venda abre em 15/07/2026, 09h no horário de São Paulo (UTC-3)
+    var presaleDate = new Date('2026-07-15T09:00:00-03:00').getTime();
+
+    function updateCountdown() {
+      var now = new Date().getTime();
+      var diff = presaleDate - now;
+
+      if (diff <= 0) {
+        document.getElementById('cd-days').textContent = '0';
+        document.getElementById('cd-hours').textContent = '0';
+        document.getElementById('cd-min').textContent = '0';
+        document.getElementById('cd-sec').textContent = '0';
+        return;
+      }
+
+      var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent = days;
+      document.getElementById('cd-hours').textContent = hours;
+      document.getElementById('cd-min').textContent = minutes;
+      document.getElementById('cd-sec').textContent = seconds;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    var liveMessages = [
+      'alguém acabou de entrar no grupo',
+      'mais uma pessoa garantiu a vaga',
+      'o grupo está crescendo rápido',
+      'não fica de fora dessa'
+    ];
+    var liveIndex = 0;
+    var liveTextEl = document.getElementById('live-text');
+    setInterval(function () {
+      liveIndex = (liveIndex + 1) % liveMessages.length;
+      liveTextEl.textContent = liveMessages[liveIndex];
+    }, 3500);
+
+    document.getElementById('btn-entrar').addEventListener('click', function () {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+      }
+    });
+  </script>
+
+</body>
+</html>
